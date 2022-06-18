@@ -1,0 +1,39 @@
+.view-box{
+    padding-bottom: 5rem;
+}
+
+.bank-name{
+    margin-left: -6rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #E93B81;
+}
+
+.bank-phone{
+    margin-left: -6rem;
+    font-size: 1.1rem;
+    color: #161D6F;
+    font-weight: 700;
+}
+
+.blood-groups{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bd-grps{
+    width: 50px;
+    height: 30px;
+    background-color: brown;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px 10px;
+
+}
+.bd-grps p{
+    margin-top: 50%;
+    transform: translateY(-100%);
+}

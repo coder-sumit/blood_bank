@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/">
+<link rel="stylesheet" href="css/style.css">
+    <title>Blood Bank | Developed by Roopam</title>
+  </head>
+  <body>
+
+    <!-- header starts here -->
+  <header>
+      <%- include('./partials/nav.ejs') %>
+       <!-- main starts here -->
+    <div class="main-head">
+        <div class="left">
+            <img src="img/blood_bank.jpeg" alt="bbank">
+        </div>
+        <div class="right">
+        <h2>Get Blood From Blood Bank In Very Short Time</h2>
+        <p>Welcome to Smart Blood Bank Management System. This smart system makes getting blood process simple, easy and fast. <br> for blood bank near you and get blood.</p>
+       <button id="get-blood" class="btn">Get Blood</button>
+       </div>
+    </div>
+</header>
+
+    <!-- header ends -->
+
+    <!-- about section -->
+    <section id="about">
+        <h2 class="sec-heading">About Us</h2>
+        <p class="sm-text">We Are Helping People to get blood fast and Easily</p>
+
+         <div class="container">
+
+             <div class="about-content">
+                A blood bank is a center where blood gathered as a result of blood donation is stored and preserved for later use in blood transfusion. The term "blood bank" typically refers to a division of a hospital where the storage of blood product occurs and where proper testing is performed (to reduce the risk of transfusion related adverse events). However, it sometimes refers to a collection center, and some hospitals also perform collection. Blood banking includes tasks related to blood collection, processing, testing, separation, and storage.
+             </div>
+             <div class="about-img">
+                <img src="img/about.png" alt="about">
+            </div>
+         </div>
+    </section>
+    
+    <section id="contact">
+        <h2 class="sec-heading">Contect Us</h2>
+        <div class="container">
+            <form action="/send-contact" method="post">
+            <div class="name">
+                <input type="text" name="fname" placeholder="Enter Your First Name" required>
+
+              
+                <input type="text" name="lname" placeholder="Enter Your Last Name" required>
+            </div>
+            <div class="detail">
+               <input type="email" name="email" placeholder="Enter Your Email" required>
+               <input type="text" name="mobile" placeholder="Enter Your Mobile" required>
+            </div>
+            <textarea cols="30" rows="5" name="description" placeholder="Write something here..." required></textarea>
+            <button class="btn" type="submit">
+                Submit
+            </button>
+        </form>
+        </div>
+    </section>
+
+      <%- include('./partials/foo.ejs'); %>
+    <script src="js/app.js"></script>
+  </body>
+</html>

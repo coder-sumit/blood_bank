@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doners</title>
+    <link rel="stylesheet" href="css/admin/style.css">
+    <link rel="stylesheet" href="css/doner.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs'); %>
+     
+    <div class="viewbox">
+
+        <%
+        for(let i of doner){
+         %>
+         <div class="view-card">
+           
+           <div class="view-img">
+             <img src="img/doner.png" alt="doner">
+           </div>
+           <div>
+             <h3 class="doner-name">
+              <%= i.donerName %>
+             </h3>
+             <p class="doner-phone"><%= i.donerMobile %></p>
+           </div>
+           <div class="flex">
+           <div class="blood-group">
+            <%= i.bloodGroup %>
+           </div>
+           <a href="/del-doner?id=<%=i.id%>" id="deleteDoner" class="admin-doner-delete">
+               <img src="img/del.png" alt="del">
+           </a>
+           </div>
+         </div>
+         <%
+        }
+        %> 
+    </div>
+
+
+    <%- include('../partials/foo.ejs'); %>
+</body>
+</html>

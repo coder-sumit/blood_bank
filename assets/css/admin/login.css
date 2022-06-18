@@ -1,0 +1,95 @@
+/* css reset */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+img{
+   width: 100%;
+   height: 100%;
+}
+/* styling login page */
+.login-container{
+   margin-top: 2rem;
+   background-image: linear-gradient( 36deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+   padding: 3rem 0;
+
+}
+.login-container h2{
+   text-align: center;
+   color: #FFF;
+   font-weight: bold;
+   font-size: 3rem;
+   margin-top: -1rem;
+}
+.login-box{
+   display: flex;
+   justify-content: space-evenly;
+   height: 500px;
+   width: 60vw;
+   margin: auto;
+   margin-top: 2rem;
+   background-color: white;
+   box-shadow:
+   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+   0 12.5px 10px rgba(0, 0, 0, 0.06),
+   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+   0 100px 80px rgba(0, 0, 0, 0.12);
+   border-radius: 10px;
+}
+.login-form h3{
+   font-weight: bold;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 2rem;
+   color: rgb(120, 115, 115);
+   margin-top: 2.5rem;
+}
+.login-box .login-img{
+      width: 40%;
+      height: 100%;
+}
+.login-box .login-form{
+   width: 50%;
+}
+.login-form form .input{
+   width: 100%;
+   position: relative;
+}
+.login-form form .input .input-img{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   bottom: 15px;
+   left: 5px;
+
+}
+input{
+   width: 100%;
+   margin-top: 3rem;
+   outline: none;
+   padding: 4px 20px;
+   font-size: 1.4rem;
+}
+input{
+   border: none;
+   border-bottom: 3px solid #9d9fa0;
+   padding-left: 40px;
+   color: #535358;
+}
+
+::placeholder{
+   color: #a4a4a4;
+}
+.btn-login{
+   color: white;
+   background-color: #333C83;
+   border: none;
+   width: 200px;
+   text-align: center;
+   padding: 5px 0;
+   margin-top: 3rem;
+   border-radius: 30px;
+   font-weight: 700;
+}

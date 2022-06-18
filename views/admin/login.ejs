@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin/login.css">
+</head>
+
+<body>
+    <div class="container login-container">
+
+        <h2>Welcome To Blood Management System</h2>
+
+        <div class="login-box">
+            <div class="login-img">
+                <img src="img/login.jpeg" alt="login">
+            </div>
+            <div class="login-form">
+                <h3>Log in</h3>
+                <form action="/login-send" method="post">
+                    <div class="input">
+                        <div class="input-img">
+                            <img src="img/user.png" alt="pass">
+                        </div>
+                        <input autocomplete="off" type="text" name="user" placeholder="Enter Your Username">
+                    </div>
+                    <div class="input">
+                        <div class="input-img">
+                            <img src="img/pass.png" alt="pass">
+                        </div>
+                        <input type="password" name="pass" placeholder="Enter Your Password">
+                    </div>
+
+
+                    <input class="btn-login" type="submit" value="Log in">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

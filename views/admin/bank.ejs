@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Banks</title>
+    <link rel="stylesheet" href="css/admin/style.css">
+    <link rel="stylesheet" href="css/doner.css">
+    <link rel="stylesheet" href="css/get-blood.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs'); %>
+
+    <div class="view-box">
+
+        <% for(let i of bank){ %>
+        <div class="view-card">
+          <div class="view-img">
+            <img src="img/blood-bank.svg" alt="blood bank">
+          </div>
+          <div>
+            <h3 class="bank-name">
+              <%= i.bbname %>
+            </h3>
+            <p class="bank-phone"><%= i.bbnumber %></p>
+          </div>
+
+
+          <div class="blood-groups">
+              <% for(let j of i.bbGroup){ %>
+            <div class="bd-grps">
+             <p> <%= j %> </p> 
+            </div>  
+            <% } %> 
+          </div>
+
+          
+          <a href="/del-bank?id=<%= i.id %>" class="admin-doner-delete">
+            <img src="img/del.png" alt="del">
+        </a>
+
+        </div>
+        <% } %>
+      </div>
+
+    <%- include('../partials/foo.ejs'); %>
+</body>
+</html>

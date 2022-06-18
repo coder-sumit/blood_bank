@@ -1,0 +1,57 @@
+
+.viewbox{
+    width: 80%;
+    min-width: 360px;
+    /* border: 2px solid black; */
+    padding-bottom: 7rem;
+    margin: auto;
+}
+
+.view-card{
+    width: 60%;
+
+    background-color: #F9F3EE;
+    margin: 2rem auto;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.doner-name{
+    margin-left: -10rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: brown;
+}
+
+.doner-phone{
+    margin-left: -10rem;
+    font-size: 1.2rem;
+}
+
+.blood-group{
+    margin-right: 2rem;
+    background-color: #FD5D5D;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+/* admin part */
+.admin-doner-delete img{
+       width: 50px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}

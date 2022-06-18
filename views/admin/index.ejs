@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %> 
+    </title>
+    <link rel="stylesheet" href="css/admin/style.css">
+</head>
+
+<body>
+   <header>
+       <%- include('./partials/nav.ejs'); %>
+   </header>
+
+   <main>
+       <div class="blood-bank-form">
+           <h2 class="form-heading">Add Blood Bank</h2>
+           <form action="/add-blood-bank" method="post">
+               <input class="input" placeholder="Enter Blood Bank Name" type="text" name="bbname" required> <br>
+               <input class="input" placeholder="Enter Blood Bank Contact Number" type="text" name="bbnumber" required> <br>
+
+               <p class="radio-label">Select Available Blood Group:</p>
+               <label for="A-">A-</label>
+               <input type="checkbox" name="bbgroup" value="A-">
+               <label for="A+">A+</label>
+               <input type="checkbox" name="bbgroup" value="A+">
+               <label for="B+">B+</label>
+               <input type="checkbox" name="bbgroup" value="B+">
+               <label for="B-">B-</label>
+               <input type="checkbox" name="bbgroup" value="B-">
+               <br>
+               <label for="O+">O+</label>
+               <input type="checkbox" name="bbgroup" value="O+">
+               <label for="O-">O-</label>
+               <input type="checkbox" name="bbgroup" value="O-">
+               <label for="AB-">AB-</label>
+               <input type="checkbox" name="bbgroup" value="AB-">
+               <label for="AB-">AB+</label>
+               <input type="checkbox" name="bbgroup" value="AB+">
+                <br>
+              <input class="btn" type="submit" value="Add Blood Bank">
+           </form>
+       </div>
+       <div class="doner-form">
+        <h2 class="form-heading">Add Doner</h2>
+           <form action="/add-doner" method="post">
+               <input class="input" type="text" placeholder="Enter Doner Name" name="donerName" required> <br>
+               <input class="input" type="text" placeholder="Enter Doner Phone" name="donerMobile" required> <br>
+               <p class="bloodGroup">Select Blood Group :</p>
+               <select name="bloodGroup" class="input">
+                   <option value="O+">O+</option>
+                   <option value="O-">O-</option>
+                   <option value="A+">A+</option>
+                   <option value="A-">A-</option>
+                   <option value="B+">B+</option>
+                   <option value="B-">B-</option>
+                   <option value="AB+">AB+</option>
+                   <option value="AB-">AB-</option>
+               </select> <br>
+               <input class="btn" type="submit" value="Add Doner">
+           </form>
+       </div>
+   </main>
+
+
+   
+
+   <div class="form-data">
+       <h2>Contact Requests</h2>
+       <div class="data-cont">
+        <% for(let i of contact){ %>
+        <div class="con-card">
+            <div class="name">
+                <b>Name: </b>
+                <p class="myname"> <%= i.fname %> </p>
+                <p> <%= i.lname %> </p>
+            </div>
+            <div class="email">
+               <b>Email: </b>
+               <p><%= i.email %> </p> 
+            </div>
+            <div class="mobile">
+             <b>Mobile: </b>
+             <p><%= i.mobile %></p> 
+            </div>
+            <div class="desc">
+ 
+               <p><%= i.description %></p> 
+            </div>
+ 
+            <a class="del-btn" href="/del-contact?id=<%= i.id %>">
+                <img src="img/del.png" alt="del">
+            </a>
+        </div>
+
+        <% } %>
+
+    </div>
+   </div>
+
+   <%- include('../partials/foo.ejs'); %>
+
+</body>
+</html>
